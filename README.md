@@ -1,7 +1,7 @@
 # super-rentals
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This project was built with the help of the [https://guides.emberjs.com/release/tutorial/ember-cli/](Ember Tutorial). This particular build also has the ability to interface with a custom [https://github.com/lindsaymkelly/super-rentals-api](Rails API) built to model the sample data. To see the application in action, please make sure to also clone the above Rails API and follow the instructions in that ReadMe as well.
+
 
 ## Prerequisites
 
