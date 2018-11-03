@@ -1,8 +1,8 @@
 export default function() {
   
-  this.namespace = '/api/v1';
-  this.urlPrefix = 'http://localhost:3000';
-  this.get('http://localhost:3000/api/v1/rentals', 'rentals')
+  // this.namespace = '/api/v1';
+  // this.urlPrefix = 'http://localhost:3000';
+  // this.get('http://localhost:3000/api/v1/rentals', 'rentals')
 // }
 
 // this.namespace = '/api';
@@ -45,19 +45,20 @@ export default function() {
 //         }
 //       }];
 
-//       this.get('/rentals', function(db, request) {
-//         if(request.queryParams.city !== undefined) {
-//           let filteredRentals = rentals.filter(function(i) {
-//             return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
-//           });
-//           return { data: filteredRentals };
-//         } else {
-//           return { data: rentals };
-//         }
-//       });
+      this.get('http://localhost:3000/api/v1/rentals', function(db, request) {
+        let rentals = db.rentals
+        if(request.queryParams.city !== undefined) {
+          let filteredRentals = rentals.filter(function(i) {
+            return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
+          });
+          return filteredRentals;
+        } else {
+          return rentals;
+        }
+      });
 
-//       // Find and return the provided rental from our rental list above
-//       this.get('/rentals/:id', function (db, request) {
-//         return { data: rentals.find((rental) => request.params.id === rental.id) };
-//       });
+      // Find and return the provided rental from our rental list above
+      // this.get('/rentals/:id', function (db, request) {
+      //   return { data: rentals.find((rental) => request.params.id === rental.id) };
+      // });
     }
