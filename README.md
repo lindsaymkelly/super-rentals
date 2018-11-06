@@ -2,6 +2,8 @@
 
 This project was built with the help of the [Ember Tutorial](https://guides.emberjs.com/release/tutorial/ember-cli/). This particular build also has the ability to interface with a custom [Rails API](https://github.com/lindsaymkelly/super-rentals-api) built to model the sample data. To see the application in action, please make sure to also clone the above Rails API and follow the instructions in that ReadMe as well.
 
+Make sure that the Rails API Server is running before attempting to run this Ember App. If you'd like to see how the app performs using static data, you'll need to checkout the Ember Tutorial branch: `git co ember-tutorial`
+
 
 ## Prerequisites
 
