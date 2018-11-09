@@ -1,0 +1,14 @@
+<h2>Edit Rental</h2>
+<div>
+  {{input value=newRentalTitle placeholder="Title"}}
+  {{input value=newRentalOwner placeholder="Owner"}}
+  {{input value=newRentalCity placeholder="City"}}
+  {{input value=newRentalCategory placeholder="Category"}}
+  {{input value=newRentalImage placeholder="Image URL"}}
+  {{input value=newRentalBedrooms placeholder="# of Bedrooms"}}
+  {{input value=newRentalDescription placeholder="Description"}}
+  <button class="button" {{action 'saveRental'}}>Update</button>
+</div>
+{{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+{{/if}}
