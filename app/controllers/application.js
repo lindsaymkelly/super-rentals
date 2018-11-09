@@ -1,38 +1,43 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  actions: {
-    createRental() {
-      let newRentalTitle = this.get('newRentalTitle')
-      let newRentalOwner = this.get('newRentalOwner')
-      let newRentalCity = this.get('newRentalCity')
-      let newRentalCategory = this.get('newRentalCategory')
-      let newRentalImage = this.get('newRentalImage')
-      let newRentalBedrooms = this.get('newRentalBedrooms')
-      let newRentalDescription = this.get('newRentalDescription')
 
-      let newRecord = this.store.createRecord('rental', {
-        title: newRentalTitle,
-        owner: newRentalOwner,
-        city: newRentalCity,
-        category: newRentalCategory,
-        image: newRentalImage,
-        bedrooms: newRentalBedrooms,
-        description: newRentalDescription
+  // responseMessage: '',
 
-      })
-      newRecord.save()
-    },
-    updateRental() {
-      let updatedTitle = this.get('updatedTitle')
-      let rental = this.get('model').findBy('id', '1')
-      rental.set('title', updatedTitle)
-      rental.save()
-    },
-    destroyRental() {
-      let destroyId = this.get('destroyId')
-      let rental = this.get('model').findBy('id', destroyId)
-      rental.destroyRecord()
-    }
-  }
+  // actions: {
+  //   createRental() {
+  //     const newRentalTitle = this.get('newRentalTitle')
+  //     const newRentalOwner = this.get('newRentalOwner')
+  //     const newRentalCity = this.get('newRentalCity')
+  //     const newRentalCategory = this.get('newRentalCategory')
+  //     const newRentalImage = this.get('newRentalImage')
+  //     const newRentalBedrooms = this.get('newRentalBedrooms')
+  //     const newRentalDescription = this.get('newRentalDescription')
+
+  //     const newRecord = this.store.createRecord('rental', {
+  //       title: newRentalTitle,
+  //       owner: newRentalOwner,
+  //       city: newRentalCity,
+  //       category: newRentalCategory,
+  //       image: newRentalImage,
+  //       bedrooms: newRentalBedrooms,
+  //       description: newRentalDescription
+
+  //     })
+  //     newRecord.save().then(response => {
+  //       this.set('responseMessage', 'Thank you! Your new property has been added.');
+  //     });
+  //   }
+  //   updateRental() {
+  //     const updatedTitle = this.get('updatedTitle')
+  //     const rental = this.get('model').findBy('id', '1')
+  //     rental.set('title', updatedTitle)
+  //     rental.save()
+  //   },
+  //   destroyRental() {
+  //     const destroyId = this.get('destroyId')
+  //     const rental = this.get('model').findBy('id', destroyId)
+  //     rental.destroyRecord()
+  //   }
+  // }
 });

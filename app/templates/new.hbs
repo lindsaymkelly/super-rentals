@@ -8,3 +8,6 @@
   {{input value=newRentalDescription placeholder="Description"}}
   <button {{action 'createRental'}}>Create</button>
 </div>
+{{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+{{/if}}
