@@ -1,4 +1,4 @@
-<h2>New Rental</h2>
+<h2>Edit Rental</h2>
 <div>
   {{input value=newRentalTitle placeholder="Title"}}
   {{input value=newRentalOwner placeholder="Owner"}}
@@ -7,7 +7,7 @@
   {{input value=newRentalImage placeholder="Image URL"}}
   {{input value=newRentalBedrooms placeholder="# of Bedrooms"}}
   {{input value=newRentalDescription placeholder="Description"}}
-  <button class="button" {{action 'createRental'}}>Create</button>
+  <button class="button" {{action 'saveRental'}}>Update</button>
 </div>
 {{#if responseMessage}}
   <div class="alert alert-success">{{responseMessage}}</div>

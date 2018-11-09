@@ -14,6 +14,10 @@
       <strong>Number of bedrooms:</strong> {{model.bedrooms}}
     </div>
     <p class="description">{{model.description}}</p>
+    <div class="detail">
+      {{#link-to 'rentals.edit' model.id class="button"}}Edit{{/link-to}}
+      <button class="button" {{action 'deleteRental' model}}>Delete</button>
+    </div>
   </div>
   <img src="{{model.image}}" class="rental-pic">
 </div>
