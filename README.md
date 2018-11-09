@@ -4,6 +4,10 @@ This project was built with the help of the [Ember Tutorial](https://guides.embe
 
 Make sure that the Rails API Server is running before attempting to run this Ember App. If you'd like to see how the app performs using static data, you'll need to checkout the Ember Tutorial branch: `git co ember-tutorial`
 
+NEW: Added Create, Update, and Destroy functionality
+* To create a new property, navigate to new tab on the nav bar "New Rental" and fill out the form
+* To update or destroy, click on an individual property and select one of the options at the bottom of the view
+
 
 ## Prerequisites
 
